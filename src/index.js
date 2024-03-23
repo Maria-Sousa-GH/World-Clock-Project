@@ -1,27 +1,25 @@
 function updateTime() {
   let losAngelesElement = document.querySelector("#los-angeles");
-  if (losAngelesElement) {
-    let losAngelesDateElement = losAngelesElement.querySelector(".date");
-    let lostAngelesTimeElement = losAngelesElement.querySelector(".time");
-    let losAngelesTime = moment().tz("America/Los_Angeles");
 
-    losAngelesDateElement.innerHTML = losAngelesTime.format("MMMM	Do YYYY");
-    lostAngelesTimeElement.innerHTML = losAngelesTime.format(
-      "h:mm:ss [<small>]A[</small>]"
-    );
-  }
+  let losAngelesDateElement = losAngelesElement.querySelector(".date");
+  let lostAngelesTimeElement = losAngelesElement.querySelector(".time");
+  let losAngelesTime = moment().tz("America/Los_Angeles");
+
+  losAngelesDateElement.innerHTML = losAngelesTime.format("MMMM	Do YYYY");
+  lostAngelesTimeElement.innerHTML = losAngelesTime.format(
+    "h:mm:ss [<small>]A[</small>]"
+  );
 
   let aucklandElement = document.querySelector("#auckland");
-  if (aucklandElement) {
-    let aucklandDateElement = aucklandElement.querySelector(".date");
-    let aucklandTimeElement = aucklandElement.querySelector(".time");
-    let aucklandTime = moment().tz("Australia/Auckland");
 
-    aucklandDateElement.innerHTML = aucklandTime.format("MMMM	Do YYYY");
-    aucklandTimeElement.innerHTML = aucklandTime.format(
-      "h:mm:ss [<small>]A[</small>]"
-    );
-  }
+  let aucklandDateElement = aucklandElement.querySelector(".date");
+  let aucklandTimeElement = aucklandElement.querySelector(".time");
+  let aucklandTime = moment().tz("Australia/Auckland");
+
+  aucklandDateElement.innerHTML = aucklandTime.format("MMMM	Do YYYY");
+  aucklandTimeElement.innerHTML = aucklandTime.format(
+    "h:mm:ss [<small>]A[</small>]"
+  );
 }
 
 function updateCity(event) {
